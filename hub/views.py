@@ -3,6 +3,9 @@ from django.shortcuts import render
 from .models import Market_place
 def Home (request):
     return render (request,'home.html')
+
+def About (request):
+    return render (request,'about.html')    
 # Create your views here.
 
 def home(request):
@@ -12,3 +15,4 @@ def home(request):
     }
 
     return render (request,'home.html',context=context)
+  

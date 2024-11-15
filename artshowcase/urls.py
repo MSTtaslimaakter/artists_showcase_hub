@@ -19,7 +19,10 @@ from django.urls import path
 from hub import views 
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.Home,name='Home'),
+    path('',views.About,name='About'),
+   
 ]
