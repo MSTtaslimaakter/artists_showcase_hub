@@ -6,6 +6,24 @@ def Home (request):
 
 def About (request):
     return render (request,'about.html')    
+
+def Profile (request):
+    return render (request,'profile.html')
+
+def Event (request):
+    return render (request,'event.html')
+
+def Sign_in (request):
+    return render (request,'sign_in.html')
+
+def Log_in (request):
+    return render (request,'log_in.html')
+
+def Gallery (request):
+    return render (request,'gallery.html')
+
+
+
 # Create your views here.
 
 def home(request):
