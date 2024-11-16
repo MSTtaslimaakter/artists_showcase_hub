@@ -15,4 +15,11 @@ def home(request):
     }
 
     return render (request,'home.html',context=context)
-  
+def about(request):
+    art= Market_place.objects.all()
+    context= {
+        'art': art,
+    }
+
+    return render (request,'about.html',context=context)
+    
