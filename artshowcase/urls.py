@@ -23,6 +23,11 @@ from hub import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.Home,name='Home'),
-    path('',views.About,name='About'),
+    path('about/',views.About,name='About'),
+    path('profile/',views.Profile,name='Profile'),
+    path('event/',views.Event,name='Event'),
+    path('sign_in/',views.Sign_in,name='Sign_in'),
+    path('log_in/',views.Log_in,name='Log_in'),
+    path('gallery/',views.Gallery,name='Gallery'),
    
 ]
