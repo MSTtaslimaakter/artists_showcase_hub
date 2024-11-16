@@ -13,7 +13,7 @@ class Market_place(models.Model):
         return self.Artname
 
 
-# Artist model (Entity)
+
 class Artist(models.Model):
     artist_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
@@ -29,15 +29,15 @@ class Artist(models.Model):
     def __str__(self):
         return self.name
 
-# ArtPiece model (Entity)
+
 class ArtPiece(models.Model):
     art_piece_id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255)
     description = models.TextField()
     artist = models.ForeignKey(Artist, related_name='art_pieces', on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    medium = models.CharField(max_length=50)  # e.g., Oil painting, sculpture, etc.
-    size = models.CharField(max_length=50)  # e.g., 24x36 inches
+    medium = models.CharField(max_length=50)  
+    size = models.CharField(max_length=50) 
     image = models.ImageField(upload_to='art_pieces/')
     creation_date = models.DateField()
     sold = models.BooleanField(default=False)
@@ -45,7 +45,7 @@ class ArtPiece(models.Model):
     def __str__(self):
         return self.title
 
-# Category model (Entity)
+
 class Category(models.Model):
     category_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
@@ -54,7 +54,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-# ArtPieceCategory model (Join table for Many-to-Many relationship)
+
 class ArtPieceCategory(models.Model):
     art_piece = models.ForeignKey(ArtPiece, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
