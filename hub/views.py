@@ -22,6 +22,50 @@ def Log_in (request):
 def Gallery (request):
     return render (request,'gallery.html')
 
+def Artist_profile (request):
+    return render (request, 'artist_profile.html')
+
+def Joshua_smith (request):
+    return render (request, 'josh.html')
+
+def Camilia_colins (request):
+    return render (request, 'camilia.html')
+
+def Payment_process (request):
+    return render (request, 'payment.html')
+
+def Jack_will (request):
+    return render (request, 'jack.html')
+
+def Purchased (request):
+    return render (request, 'purchase.html')
+
+def Camilias_art1 (request):
+    return render (request, 'camiliaart1.html')
+
+def Camilias_art2 (request):
+    return render (request, 'camiliaart2.html')
+
+def Camilias_art3 (request):
+    return render (request, 'camiliaart3.html')
+
+def Jacks_art1 (request):
+    return render (request, 'jackart1.html')
+
+def Jacks_art2 (request):
+    return render (request, 'jackart2.html')
+
+def Jacks_art3 (request):
+    return render (request, 'jackart3.html')
+
+def Joshuas_art1 (request):
+    return render (request, 'joshuaart1.html')
+
+def Joshuas_art2 (request):
+    return render (request, 'joshuaart2.html')
+
+def Joshuas_art3 (request):
+    return render (request, 'joshuaart3.html')
 
 
 # Create your views here.
