@@ -66,21 +66,21 @@ body {
 
 h2 {
   font-size: 36px;
-  color: #6A4E1B;
+  color: #d45912;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .profile-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items:center;
-  gap: 30px;
+  gap: 20px;
   flex-wrap:wrap;
 }
 
 .profile-picture {
-  text-align:left;
+  text-align:center;
 }
 
 .profile-picture img {
