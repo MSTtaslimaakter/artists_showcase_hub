@@ -1,47 +1,72 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>
-  Artist's Showcase Hub
-</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Artist's Showcase Hub</title>
+    <link rel="stylesheet" href="sign_in.css">
 </head>
+<body>
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">Artist's Showcase Hub</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<body> 
-  <h1>
-    <pre>                                         <button style="color: black; border: 0px solid black; font-size: 30px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; background-color: rgb(141, 124, 92);"> Home</button><button style="color: black;border: 0px solid black; font-size: 30px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; background-color: rgb(187, 157, 103);">Log-in</button></pre>
-   </h1>
-  <div class="contact">
-    <h2>Register</h2>
-  <form action="">
-    <div class="child_form">
-      <label for ="">Full Name:</label>
-      <input type="text" placeholder="Enter name">
-    </div>
-    <div class="child_form">
-      <label for ="">Email:</label>
-    <input type="email" placeholder="Enter mail">
-    </div>
-    <div class="child_form">
-      <label for ="">Date-Of-Birth:</label>
-      <input type="date">
-    </div>
-    <div class="child_form">
-      <label for ="">Gender:</label>
-      <input type="text" placeholder="Enter your gender">
-    </div>
-    <div class="child_form">
-      <label for ="">Contact-Info:</label>
-      <input type="number" placeholder="Enert your phone num">
-    </div>
-    <div class="child_form">
-      <input type="button" value="Create Account">
-    </div>
-    <div class="child_form">
-      <input type="button" value="Back">
-    </div>
-     </div>
-  </form>
+    <!-- Main Content Section -->
+    <main class="content">
+        <h2>Register</h2>
+        <form action="#" method="POST" class="register-form">
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="text" id="gender" name="gender" placeholder="Enter your gender" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Info:</label>
+                <input type="number" id="contact" name="contact" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create Account" class="btn">
+            </div>
+            <div class="form-group">
+                <input type="button" value="Back" class="btn-secondary" onclick="window.history.back();">
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Artist's Showcase Hub. All rights reserved.</p>
+            <p>Follow us on social media!</p>
+            <div class="social-links">
+                <a href="#">Facebook</a> | 
+                <a href="#">Twitter</a> | 
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
