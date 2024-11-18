@@ -48,18 +48,19 @@ body {
 }
 
 .main-nav a:hover {
-  background-color: #e4935d;
+  background-color: #FF6A00;
   border-radius: 5px;
 }
 
 .main-nav a.active {
-  background-color: #db914c; /* Active link highlight */
+  background-color: #e4935d;c; /* Active link highlight */
   border-radius: 5px;
 }
 
+
 /* Hero Section Styles */
 .hero {
-  background-color: #db914c; /* Light Orange Background */
+  background-color: #f1bf72; /* Light Orange Background */
   padding: 60px 20px;
   text-align: center;
 }
