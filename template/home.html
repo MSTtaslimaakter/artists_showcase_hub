@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Artist Showcase Hub</title>
-    <link rel="stylesheet" href="home.css"> <!-- Link to existing CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home.css' %}"> <!-- Link to existing CSS -->
 </head>
 <body>
 
@@ -14,6 +15,7 @@
             <h1 class="site-title">Artist's Showcase Hub</h1>
             <nav class="main-nav">
                 <ul>
+<<<<<<< HEAD
                     <li><a href="home.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="artist_profile.html">Artists</a></li>
@@ -21,6 +23,16 @@
                     <li><a href="event.html">Events</a></li>
                     <li><a href="sign_in.html">Sign In</a></li>
                     <li><a href="log_in.html">Log In</a></li>
+=======
+                    <li><a href="{% url 'Home' %}" class="active">Home</a></li>
+                    <li><a href="{% url 'About' %}">About Us</a></li>
+                    <li><a href="{% url 'Artist_profile' %}">Artists</a></li>
+                    <li><a href="{% url 'Gallery' %}">Gallery</a></li>
+                    <li><a href="{% url 'Event' %}">Events</a></li>
+                    <li><a href="{% url 'Sign_in' %}">Sign In</a></li>
+                    <li><a href="{% url 'Log_in' %}">Log In</a></li>
+
+>>>>>>> c0418d4845aa2123cb0bd3644428a593f1c69090
                 </ul>
             </nav>
         </div>

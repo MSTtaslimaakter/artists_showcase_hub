@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from hub import views 
+from django.conf.urls.static import static
+from django.conf import settings
+
+
 
 
 
@@ -45,7 +49,4 @@ urlpatterns = [
     path('joshuas_art2/',views.Joshuas_art2,name='Joshuas_art2'),
     path('joshuas_art3/',views.Joshuas_art3,name='Joshuas_art3'),
     
-
-
-
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
