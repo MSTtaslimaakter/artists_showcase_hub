@@ -48,5 +48,11 @@ urlpatterns = [
     path('joshuas_art1/',views.Joshuas_art1,name='Joshuas_art1'),
     path('joshuas_art2/',views.Joshuas_art2,name='Joshuas_art2'),
     path('joshuas_art3/',views.Joshuas_art3,name='Joshuas_art3'),
+    path('paintings/', views.Paintings, name='Paintings'),
+    path('illustrations/', views.Illustrations, name='Illustrations'),
+    path('handcrafts/', views.Handcraft, name='HandCrafts'),
+    path('photography/', views.Photography, name='Photography'),
+    path('abstractart/', views.Abstractart, name='AbstractArt'),
+
     
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

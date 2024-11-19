@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist's Showcase Hub - Illustrations</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'gallery.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">Artist's Showcase Hub</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="{% url 'Home' %}">Home</a></li>
+                    <li><a href="{% url 'Event' %}">Events</a></li>
+                    <li><a href="{% url 'Log_in' %}">Log-in</a></li>
+                    <li><a href="{% url 'Gallery' %}">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Category Section -->
+    <main class="content">
+        <div class="container">
+            <h2>Illustrations</h2>
+            <p>Explore unique and creative illustrations from various artists.</p>
+
+            <div class="image-gallery">
+                <div class="image-item">
+                    <img src="{% static 'images/illustration1.jpg' %}" alt="Illustration 1">
+                </div>
+                <div class="image-item">
+                    <img src="{% static 'images/illustration2.jpg' %}" alt="Illustration 2">
+                </div>
+                <div class="image-item">
+                    <img src="{% static 'images/illustration3.jpg' %}" alt="Illustration 3">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Artist's Showcase Hub. All rights reserved.</p>
+            <p>Follow us on social media for updates!</p>
+        </div>
+    </footer>
+</body>
+</html>
