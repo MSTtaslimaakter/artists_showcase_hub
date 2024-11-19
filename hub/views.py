@@ -67,6 +67,17 @@ def Joshuas_art2 (request):
 def Joshuas_art3 (request):
     return render (request, 'joshuaart3.html')
 
+def Paintings (request):
+    return render (request, 'paintings.html')
+def Illustrations (request):
+    return render (request, 'illustrations.html')
+def Handcraft (request):
+    return render (request, 'handcraft.html')
+def Photography (request):
+    return render (request, 'photography.html')
+def Abstractart (request):
+    return render (request, 'abstractart.html')
+
 
 # Create your views here.
 
