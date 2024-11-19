@@ -1,27 +1,64 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Camilia's Art-Artist showcase Hub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camilia's Art - Krishna</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-
-    <nav class="navbar">
-        <div class="navdiv">
-            <div class="logo"><a href="#">Krishna</a></div>
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">Camilia's Art - Krishna</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="signin.html">Sign In</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="profile.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <ul>
-            <button><a href="#">Home</a></button>
-            <button><a href="#">Signin</a></button>
-        </ul><br>
-        <ul>
-            <img src="sculp (3).jpeg" width="450" height="600"><br>
-            <p><strong>$1206.00</strong></p>
-            <button><a href="#"><strong>Love</strong></a></button><br><br>
+    </header>
 
-            <button><a href="#"><strong>Purchase Now</strong></a></button><br>
-        </ul>
-        <form action="/action_page.php">
-          <textarea name="comment" placeholder="Write your comment here..." required></textarea>
-      </form>
+    <!-- Main Content Section -->
+    <main class="content">
+        <section class="art-details">
+            <div class="art-image">
+                <img src="sculp (3).jpeg"  width="450" height="600">
+            </div>
+            <div class="art-info">
+                <h2>Krishna</h2>
+                <p><strong>Price:</strong> $1206.00</p>
+               
+                <div class="art-buttons">
+                    <button><a href="#"><strong>Love</strong></a></button>
+                    <button><a href="#"><strong>Purchase Now</strong></a></button>
+                </div><br>
+            </div>
+        </section>
+
+        <section class="art-comments">
+            <h2>Leave a Comment</h2>
+            <form action="/action_page.php" method="post">
+                <textarea name="comment" placeholder="Write your comment here..." required></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Artist's Showcase Hub. All rights reserved.</p>
+            <p>Follow us on social media!</p>
+            <div class="social-links">
+                <a href="#">Facebook</a> | 
+                <a href="#">Twitter</a> | 
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,62 @@
+/* Completion Message Section */
+.completion-message {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 800px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.completion-message h2 {
+  font-size: 28px;
+  color: #db914c;
+  margin-bottom: 20px;
+}
+
+.completion-message p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Action Buttons */
+.completion-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.completion-actions button {
+  background-color: #e4935d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.completion-actions button a {
+  color: white;
+  text-decoration: none;
+}
+
+.completion-actions button:hover {
+  background-color: #db914c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .completion-message {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .completion-actions {
+    flex-direction: column;
+  }
+}

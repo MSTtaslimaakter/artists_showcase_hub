@@ -1,36 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joshua Smith-Artists Showcase Hub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh Smith - Artist's Showcase Hub</title>
+    <link rel="stylesheet" href="josh.css"> <!-- Linking the jack.css file for consistent styling -->
 </head>
 <body>
-  <nav class="navbar">
-    <div class="navdiv">
-        <div class="logo"><a href="#">Joshua Smith Profile</a></div>
-    </div><br>
 
-    <ul>
-      <button><a href="#">Home</a></button>
-      <button><a href="#">Signin</a></button><br><br>
-    </ul><br>
-    
-    <p> Joshua Smith is an award-winning photographer known for portrait and landscape photography. With a keen eye for detail and a passion for storytelling through images, Joshua captures stunning, emotive visuals that speak to the heart of their subjects. Over the years, he has earned accolades such as the "GIMA Award" for Best Landscape Photography, the prestigious "Eagle Eye Award" for his work, and has been featured in top publications like "Stary Night". Driven by a love for art and an ability to transform moments into timeless memories, Joshua continues to push the boundaries of photographic creativity.</p><br>
 
-    <ul>
-      <img src="photo (3).jpeg" width="150" height="200">
-      <li><a href="#">Smokie Curves</a></li>
-      <p>$1068.00</p>
-      <img src="photo (2).jpeg" width="150" height="200">
-      <li><a href="#">Thoughts of Waiting</a></li>
-      <p>$856.00</p>
-      <img src="photo (5).jpeg" width="150" height="200"><br>
-      <li><a href="#">Blood and Fire</a></li>
-      <p>$917.00</p>
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">Josh Smith's's Profile</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="signin.html">Sign In</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="profile.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Main Content Section -->
+    <main class="content">
+        <section class="artist-intro">
+            <h2>Joshua Smith - Artist Profile</h2>
+            <p>Joshua Smith is an award-winning photographer known for portrait and landscape photography. With a keen eye for detail and a passion for storytelling through images, Joshua captures stunning, emotive visuals that speak to the heart of their subjects. Over the years, he has earned accolades such as the "GIMA Award" for Best Landscape Photography, the prestigious "Eagle Eye Award" for his work, and has been featured in top publications like "Stary Night". Driven by a love for art and an ability to transform moments into timeless memories, Joshua continues to push the boundaries of photographic creativity.</p><br>
+        </section>
 
-    </ul>
 
-  
+    <section class="artist-gallery"><br><br>
+        <h2>Featured Photographs</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="photo (3).jpeg"  width="150" height="200">
+                <h3>Smokie Curves</h3>
+                <p>$1068.00</p>
+            </div>
+            <div class="gallery-item">
+                <img src="photo (2).jpeg" width="150" height="200">
+                <h3>Thoughts of waiting</h3>
+                <p>$856.00</p>
+            </div>
+            <div class="gallery-item">
+                <img src="photo (5).jpeg"  width="150" height="200">
+                <h3>Blood and fire</h3>
+                <p>$917.00</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Artist's Showcase Hub. All rights reserved.</p>
+            <p>Follow us on social media!</p>
+            <div class="social-links">
+                <a href="#">Facebook</a> | 
+                <a href="#">Twitter</a> | 
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

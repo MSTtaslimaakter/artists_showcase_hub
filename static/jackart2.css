@@ -1,0 +1,206 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F4C2C2; /* Baby Pink Background Color */
+  color: #333;
+}
+
+/* Header Styles */
+.site-header {
+  background-color: #e4935d;
+  color: white;
+  padding: 20px 0;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.site-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.main-nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.main-nav li {
+  margin-left: 20px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 16px;
+}
+
+.main-nav a:hover {
+  background-color: #d8814a;
+  border-radius: 5px;
+}
+
+/* Main Content Styles */
+.content {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.content h2 {
+  color: #db914c;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Artwork Section */
+.art-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.art-container img {
+  max-width: 100%;
+  height: auto;
+  border: 5px solid #e4935d;
+  border-radius: 10px;
+}
+
+.art-details {
+  text-align: center;
+}
+
+.art-details p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.art-details button a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #db914c;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.art-details button a:hover {
+  background-color: #c47a3a;
+}
+
+/* Comment Form Styles */
+.comment-form {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.comment-form textarea {
+  width: 80%;
+  max-width: 600px;
+  height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical; /* Allows resizing only vertically */
+}
+
+.comment-form textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.comment-form button {
+  font-size: 16px;
+  background-color: #e4935d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.comment-form button:hover {
+  background-color: #d8814a;
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: #e4935d;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.site-footer .social-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.site-footer .social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .site-header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+  }
+
+  .main-nav li {
+    margin-bottom: 10px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .art-container {
+    flex-direction: column;
+  }
+
+  .comment-form textarea {
+    width: 100%;
+  }
+}
