@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #F4C2C2; /* Baby Pink Background */
+  background-color: #F4C2C2; /* Baby Pink Background Color */
   color: #333;
 }
 
@@ -48,11 +48,11 @@ body {
 }
 
 .main-nav a:hover {
-  background-color: #d8814a;
+  background-color: #e4935d;
   border-radius: 5px;
 }
 
-/* Main Content Styles */
+/* Main Content Section */
 .content {
   padding: 40px 20px;
   max-width: 1200px;
@@ -66,85 +66,79 @@ body {
   color: #db914c;
   font-size: 32px;
   margin-bottom: 20px;
-  text-align: center;
 }
 
-/* Artwork Section */
 .art-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 .art-container img {
-  max-width: 100%;
-  height: auto;
-  border: 5px solid #e4935d;
+  width: 400px;
+  height: 650px;
+  object-fit: cover;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .art-details {
-  text-align: center;
+  margin-left: 20px;
+  color: #333;
 }
 
 .art-details p {
   font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.art-details button {
+  background-color: #e4935d;
+  color: white;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .art-details button a {
-  display: inline-block;
-  color: white;
   text-decoration: none;
-  font-size: 16px;
+  color: white;
+}
+
+.art-details button:hover {
   background-color: #db914c;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
 }
 
-.art-details button a:hover {
-  background-color: #c47a3a;
+/* Comment Section */
+form {
+  margin-top: 30px;
 }
 
-/* Comment Form Styles */
-.comment-form {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.comment-form textarea {
-  width: 80%;
-  max-width: 600px;
-  height: 100px;
+form textarea {
+  width: 100%;
+  height: 150px;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  resize: vertical; /* Allows resizing only vertically */
+  margin-bottom: 20px;
 }
 
-.comment-form textarea::placeholder {
-  color: #aaa;
-  font-style: italic;
-}
-
-.comment-form button {
-  font-size: 16px;
+form button {
+  padding: 12px 24px;
   background-color: #e4935d;
   color: white;
+  font-size: 18px;
   border: none;
-  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
 }
 
-.comment-form button:hover {
-  background-color: #d8814a;
+form button:hover {
+  background-color: #db914c;
 }
 
 /* Footer Styles */
@@ -193,9 +187,16 @@ body {
 
   .art-container {
     flex-direction: column;
+    text-align: center;
   }
 
-  .comment-form textarea {
+  .art-container img {
     width: 100%;
+    height: auto;
+  }
+
+  .art-details {
+    margin-left: 0;
+    margin-top: 20px;
   }
 }
