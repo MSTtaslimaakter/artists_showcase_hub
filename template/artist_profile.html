@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Artist's Profile - Artist's Showcase Hub</title>
-    {% load static %}
-    <link rel="stylesheet" href="jack.css"> <!-- Linking the jack.css file for consistent styling -->
 
-    <title>Artist Profile - Artist's Showcase Hub</title>
+    {% load static %}
+
     <link rel="stylesheet" href="{% static 'artist_profile.css' %}">
+
 </head>
 <body>
 
@@ -32,32 +32,15 @@
     <!-- Main Content Section -->
     <main class="content">
         <section class="artist-intro">
-            <h2>Welcome to the Artist's Showcase Hub</h2>
-            <p>Explore the profiles of talented artists below!</p>
+            
+            
+            
         </section>
 
-        <!-- Artist Gallery with Buttons -->
         <section class="artist-gallery">
+            
             <div class="gallery">
                 <div class="gallery-item">
-
-                    <img src="me (1).jpeg" width="150" height="200">
-                    <h3>Joshua Smith</h3>
-                    <!-- Button to go to Joshua's page -->
-                    <a href="{% url 'Joshua_smith' %}" class="button">View Profile</a>
-                </div>
-                <div class="gallery-item">
-                    <img src="me (2).jpeg" width="150" height="200">
-                    <h3>Camilia Colins</h3>
-                    <!-- Button to go to Camilia's page -->
-                    <a href="{% url 'Camilia_colins' %}" class="button">View Profile</a>
-                </div>
-                <div class="gallery-item">
-                    <img src="me (3).jpeg" width="150" height="200">
-                    <h3>Jack Will</h3>
-                    <!-- Button to go to Jack's page -->
-                    <a href="{% url 'Jack_will' %}" class="button">View Profile</a>
-
                     <img src="me (1).jpeg"  width="150" height="200">
                     <h3><a href="{% url 'Joshua_smith' %}">Joshua Smith</a></h3>
                     
@@ -71,7 +54,6 @@
                     <img src="me (3)"  width="150" height="200">
                     <h3><a href="{% url 'Jack_will' %}">Jack Will</a></h3>
                     
-
                 </div>
             </div>
         </section>
@@ -83,8 +65,8 @@
             <p>&copy; 2024 Artist's Showcase Hub. All rights reserved.</p>
             <p>Follow us on social media!</p>
             <div class="social-links">
-                <a href="#">Facebook</a> 
-                <a href="#">Twitter</a> 
+                <a href="#">Facebook</a> | 
+                <a href="#">Twitter</a> | 
                 <a href="#">Instagram</a>
             </div>
         </div>
