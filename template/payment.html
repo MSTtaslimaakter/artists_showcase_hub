@@ -30,9 +30,13 @@
 
         <!-- Home Section -->
         <section class="hero">
-            <div class="hero-heading">
-                <h2>Welcome to the Artist Showcase Hub</h2>
-                <h3>An Open Art Gallery to Connect Local Artists</h3>
+            <div class="hero-heading-container">
+                <div class="hero-heading">
+                    <h2>Welcome to the Artist Showcase Hub</h2>
+                </div>
+                <div class="hero-subheading">
+                    <h3>An Open Art Gallery to Connect Local Artists</h3>
+                </div>
             </div>
             <div class="hero-content">
                 <p>
@@ -46,37 +50,39 @@
         </section>
 
         <!-- Payment Section -->
-        <h2>Payment Details</h2>
-        <form action="{% url 'Purchased' %}" method="POST" class="payment-form">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="name">Cardholder's Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter cardholder's name" required>
-            </div>
-            <div class="form-group">
-                <label for="my">Expiration Date (MM/YY):</label>
-                <input type="text" id="my" name="my" placeholder="MM/YY" required>
-            </div>
-            <div class="form-group">
-                <label for="cvc">CVC/CVV:</label>
-                <input type="text" id="cvc" name="cvc" placeholder="Enter CVC" required>
-            </div>
-            <div class="form-group">
-                <label for="hname">Cardholder's Name:</label>
-                <input type="text" id="hname" name="hname" placeholder="Enter cardholder's name" required>
-            </div>
-            <div class="form-group checkbox-group">
-                <input type="checkbox" id="ps" name="ps">
-                <label for="ps">Save Card & Remember Me</label>
-            </div>
-            <div class="form-group">
-                <!-- 'Pay Now' button with submission action -->
-                <button type="submit"><strong>Pay Now</strong></button>
-            </div>
-            <div class="form-group">
-                <input type="button" value="Back" class="btn-secondary" onclick="window.history.back();">
-            </div>
-        </form>
+        <div class="payment-details-container">
+            <h2>Payment Details</h2>
+            <form action="{% url 'Purchased' %}" method="POST" class="payment-form">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Cardholder's Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter cardholder's name" required>
+                </div>
+                <div class="form-group">
+                    <label for="my">Expiration Date (MM/YY):</label>
+                    <input type="text" id="my" name="my" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvc">CVC/CVV:</label>
+                    <input type="text" id="cvc" name="cvc" placeholder="Enter CVC" required>
+                </div>
+                <div class="form-group">
+                    <label for="hname">Cardholder's Name:</label>
+                    <input type="text" id="hname" name="hname" placeholder="Enter cardholder's name" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="ps" name="ps">
+                    <label for="ps">Save Card & Remember Me</label>
+                </div>
+                <div class="form-group">
+                    <!-- 'Pay Now' button with submission action -->
+                    <button type="submit" class="pay-now-button"><strong>Pay Now</strong></button>
+                </div>
+                <div class="form-group">
+                    <input type="button" value="Back" class="btn-secondary" onclick="window.history.back();">
+                </div>
+            </form>
+        </div>
     </main>
 
     <!-- Footer Section -->
