@@ -63,9 +63,10 @@ body {
 }
 
 .content h2 {
-  color: #db914c;
+  color: #e07a1b;
   font-size: 32px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .content p {
@@ -75,7 +76,7 @@ body {
 
 /* New Payment Details Container */
 .payment-details-container {
-  background-color: #f8f2e5; /* Base color for Payment Details */
+  background-color: #e4b29b; /* Base color for Payment Details */
   padding: 40px 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -89,6 +90,7 @@ body {
   color: #e4935d;
   font-size: 28px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .payment-details-container p {
