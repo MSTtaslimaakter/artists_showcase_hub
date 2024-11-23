@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jack's Art - Artist Showcase Hub</title>
-    <link rel="stylesheet" href="style.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'jackart1.css' %}">
 </head>
 <body>
     <!-- Header Section -->
@@ -13,10 +14,10 @@
             <h1 class="site-title">Artist's Showcase Hub</h1>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="{% url 'Home' %}">Home</a></li>
+                    <li><a href="{% url 'Sign_in' %}">Sign In</a></li>
+                    <li><a href="{% url 'Gallery' %}">Gallery</a></li>
+                    <li><a href="{% url 'Artist_profile' %}">Artists</a></li>
                 </ul>
             </nav>
         </div>
@@ -24,13 +25,12 @@
 
     <!-- Main Content Section -->
     <main class="content">
-        <h2>Jack's Artwork</h2>
+        <h2>Jack's Artwork-Gracefull</h2>
         <div class="art-container">
             <img src="paint (1).jpeg"  width="400" height="650">
             <div class="art-details">
                 <p><strong>Price: $1006.00</strong></p>
-                <button><a href="#">Love</a></button>
-                <button><a href="#">Purchase Now</a></button>
+                <button><a href="{% url 'Payment_process' %}"><strong>Purchase Now</strong></a></button>
             </div>
         </div><br>
         <form action="/action_page.php" method="post">

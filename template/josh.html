@@ -20,7 +20,7 @@
                     <li><a href="{% url 'Home' %}">Home</a></li>
                     <li><a href="{% url 'Sign_in' %}">Sign In</a></li>
                     <li><a href="{% url 'Gallery' %}">Gallery</a></li>
-                    <li><a href="profile.html">Contact</a></li>
+                    <li><a href="{% url 'Artist_profile' %}">Artists</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,17 +38,17 @@
         <div class="gallery">
             <div class="gallery-item">
                 <img src="photo (3).jpeg"  width="150" height="200">
-                <h3>Smokie Curves</h3>
+                <h3><a href="{% url 'Joshuas_art1' %}">Smokie Curve</a></h3>
                 <p>$1068.00</p>
             </div>
             <div class="gallery-item">
                 <img src="photo (2).jpeg" width="150" height="200">
-                <h3>Thoughts of waiting</h3>
+                <h3><a href="{% url 'Joshuas_art2' %}">Thoughts of Waiting</a></h3>
                 <p>$856.00</p>
             </div>
             <div class="gallery-item">
                 <img src="photo (5).jpeg"  width="150" height="200">
-                <h3>Blood and fire</h3>
+                <h3><a href="{% url 'Joshuas_art3' %}">Blood and Fire</a></h3>
                 <p>$917.00</p>
             </div>
         </div>
