@@ -1,4 +1,4 @@
-* {
+** {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #F4C2C2; /* Baby Pink Background Color */
-  color: #333;
+  color: #994005;
 }
 
 /* Header Styles */
@@ -71,6 +71,30 @@ body {
 .content p {
   font-size: 18px;
   line-height: 1.6;
+}
+
+/* New Payment Details Container */
+.payment-details-container {
+  background-color: #f8f2e5; /* Base color for Payment Details */
+  padding: 40px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.payment-details-container h3 {
+  color: #e4935d;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.payment-details-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 /* Payment Form Styling */
@@ -190,6 +214,10 @@ body {
     padding: 20px;
   }
 
+  .payment-details-container {
+    padding: 20px;
+  }
+
   .payment-form {
     padding: 15px;
     max-width: 100%;
@@ -212,6 +240,19 @@ body {
   .content h2 {
     font-size: 28px;
   }
+
+  .payment-details-container h3 {
+    font-size: 24px;
+  }
+
+  .payment-form .form-group input {
+    font-size: 14px;
+  }
+
+  .payment-form .btn, .payment-form .btn-secondary {
+    font-size: 16px;
+  }
+}
 
   .payment-form .form-group input {
     font-size: 14px;
