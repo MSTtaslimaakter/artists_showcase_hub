@@ -28,7 +28,7 @@ def Artist_profile (request):
 def Joshua_smith (request):
     return render (request, 'josh.html')
 
-def Camilia_colins (request):
+def Camilia_colin (request):
     return render (request, 'camilia.html')
 
 def Payment_process (request):
