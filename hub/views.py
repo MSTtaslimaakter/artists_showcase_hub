@@ -40,13 +40,13 @@ def Jack_will (request):
 def Purchased (request):
     return render (request, 'purchase.html')
 
-def Camilias_art1 (request):
+def Camilia_art1 (request):
     return render (request, 'camiliaart1.html')
 
-def Camilias_art2 (request):
+def Camilia_art2 (request):
     return render (request, 'camiliaart2.html')
 
-def Camilias_art3 (request):
+def Camilia_art3 (request):
     return render (request, 'camiliaart3.html')
 
 def Jacks_art1 (request):
