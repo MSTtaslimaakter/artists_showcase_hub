@@ -1,91 +1,162 @@
-/* Art Details Section */
-.art-details {
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F4C2C2; /* Baby Pink Background Color */
+  color: #333;
+}
+
+/* Header Styles */
+.site-header {
+  background-color: #e4935d;
+  color: white;
+  padding: 20px 0;
+}
+
+.site-header .container {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.site-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.main-nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.main-nav li {
+  margin-left: 20px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 16px;
+}
+
+.main-nav a:hover {
+  background-color: #e4935d;
+  border-radius: 5px;
+}
+
+/* Main Content */
+.content {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 }
 
-.art-image img {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.art-info {
-  max-width: 600px;
-}
-
-.art-info h2 {
-  font-size: 28px;
+.content h2 {
   color: #db914c;
-  margin-bottom: 15px;
-}
-
-.art-info p {
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 32px;
   margin-bottom: 20px;
 }
 
-.art-buttons {
-  display: flex;
-  gap: 10px;
+.content p {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-.art-buttons button {
+/* Gallery Styles */
+.artist-gallery .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 200px;
+}
+
+.gallery-item img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+.gallery-item h3 {
+  font-size: 20px;
+  color: #db914c;
+  margin: 15px 0 10px;
+}
+
+.gallery-item p {
+  font-size: 16px;
+  color: #555;
+}
+
+.gallery-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+.site-footer {
   background-color: #e4935d;
   color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
+  padding: 20px 0;
+  text-align: center;
 }
 
-.art-buttons button a {
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.site-footer .social-links a {
   color: white;
   text-decoration: none;
+  margin: 0 10px;
 }
 
-.art-buttons button:hover {
-  background-color: #db914c;
+.site-footer .social-links a:hover {
+  text-decoration: underline;
 }
 
-/* Comment Section */
-.art-comments {
-  margin-top: 40px;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .site-header .container {
+      flex-direction: column;
+      text-align: center;
+  }
 
-.art-comments h2 {
-  font-size: 24px;
-  color: #db914c;
-  margin-bottom: 15px;
-}
+  .main-nav ul {
+      flex-direction: column;
+  }
 
-.art-comments form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+  .main-nav li {
+      margin-bottom: 10px;
+  }
 
-.art-comments textarea {
-  width: 100%;
-  height: 100px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 16px;
-}
-
-.art-comments button {
-  background-color: #e4935d;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.art-comments button:hover {
-  background-color: #db914c;
+  .content {
+      padding: 20px;
+  }
 }

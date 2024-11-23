@@ -16,9 +16,9 @@
             <h1 class="site-title">Camilia Collin's Profile</h1>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="signin.html">Sign In</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="{% url 'Home' %}">Home</a></li>
+                    <li><a href="{% url 'Sign_in' %}">Sign In</a></li>
+                    <li><a href="{% url 'Gallery' %}">Gallery</a></li>
                     <li><a href="profile.html">Contact</a></li>
                 
                 </ul>
@@ -48,17 +48,17 @@
             <div class="gallery">
                 <div class="gallery-item">
                     <img src="sculp (3).jpeg"  width="150" height="200">
-                    <h3>Krishna</h3>
+                    <h3><a href="{% url 'Camilia_art1' %}">Krishna</a></h3>
                     <p>$1206.00</p>
                 </div>
                 <div class="gallery-item">
                     <img src="sculp (1).jpeg" width="150" height="200">
-                    <h3>Affection</h3>
+                    <h3><a href="{% url 'Camilia_art2' %}">Affection</a></h3>
                     <p>$1068.00</p>
                 </div>
                 <div class="gallery-item">
                     <img src="sculp.jpeg"  width="150" height="200">
-                    <h3>Guardian Angel</h3>
+                    <h3><a href="{% url 'Camilia_art3' %}">Guardian Ange</a></h3>
                     <p>$806.00</p>
                 </div>
             </div>
