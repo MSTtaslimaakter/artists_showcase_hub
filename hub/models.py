@@ -76,3 +76,43 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.username
+    
+class Painting(models.Model):
+    title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='painting/')  # Path where images will be stored
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title
+    
+class Illustration(models.Model):
+    title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='illustration/')  # Path where images will be stored
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title 
+      
+class AbstractArt(models.Model):
+    title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='abstractart/')  # Path where images will be stored
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title    
+    
+class HandCraft(models.Model):
+    title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='handcraft/')  # Image storage path
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title    
+    
+class Photography(models.Model):
+    title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='photography/')  # Image storage path
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title    

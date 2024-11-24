@@ -46,14 +46,14 @@ def Abstractart (request):
 # Create your views here.
 
 def home(request):
-    art= Market_place.objects.all()
+    art= Event_s.objects.all()
     context= {
         'art': art,
     }
 
     return render (request,'home.html',context=context)
 def about(request):
-    art= Market_place.objects.all()
+    art= Event_s.objects.all()
     context= {
         'art': art,
     }
@@ -65,6 +65,8 @@ def artist(request):
        'artists': artists,
     }
     return render (request,'artist_profile.html',context=context)
+
+
 def gallery_view(request):
     categories = Category.objects.all()
     print(categories)  # Debug: Check if categories are being retrieved
@@ -72,9 +74,46 @@ def gallery_view(request):
         'categories': categories,
     }
     return render(request, 'gallery.html', context)
+
+
 def event_page(request):
     events = Event_s.objects.all()  # Fetch all events from the correct model
     context = {
         'events': events
     }
     return render(request, 'event.html', context)
+
+def painting_gallery(request):
+    paintings = Painting.objects.all()  # Fetch all paintings from the database
+    context = {
+        'paintings': paintings
+    }
+    return render(request, 'paintings.html', context)
+
+def illustration_gallery(request):
+    illustrations = Illustration.objects.all()  # Fetch all illustrations from the database
+    context = {
+        'illustrations': illustrations
+    }
+    return render(request, 'illustrations.html', context)
+
+def abstract_art_gallery(request):
+    abstract_arts = AbstractArt.objects.all()  # Fetch all abstract art objects from the database
+    context = {
+        'abstract_arts': abstract_arts
+    }
+    return render(request, 'abstractart.html', context)
+
+def handcraft_gallery(request):
+    handcrafts = HandCraft.objects.all()  # Fetch all handcraft objects
+    context = {
+        'handcrafts': handcrafts
+    }
+    return render(request, 'handcraft.html', context)
+
+def photography_gallery(request):
+    photos = Photography.objects.all()  # Fetch all photography objects
+    context = {
+        'photos': photos
+    }
+    return render(request, 'photography.html', context)

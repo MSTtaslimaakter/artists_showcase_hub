@@ -42,5 +42,10 @@ urlpatterns = [
     path('handcrafts/', views.Handcraft, name='handcrafts'),
     path('photography/', views.Photography, name='photography'),
     path('abstractart/', views.Abstractart, name='abstractart'),
+    path('painting/', views.painting_gallery, name='paintings'),
+    path('illustration/', views.illustration_gallery, name='illustration'),
+    path('abstractart/', views.abstract_art_gallery, name='abstractart'),
+    path('handcraft/', views.handcraft_gallery, name='handcraft'),
+     path('photography/', views.photography_gallery, name='photography'),
     
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

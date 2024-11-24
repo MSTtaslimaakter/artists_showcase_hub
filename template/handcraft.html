@@ -30,15 +30,16 @@
             <p>Explore beautiful hand-crafted art pieces created by talented artisans.</p>
 
             <div class="image-gallery">
+                <!-- Loop through the handcrafts objects and display each one -->
+                {% for craft in handcrafts %}
                 <div class="image-item">
-                    <img src="{% static 'images/handcraft1.jpg' %}" alt="Handcraft 1">
+                    <img src="{{ craft.image.url }}" alt="{{ craft.title }}">
+                    <p>{{ craft.title }}</p>
+                    <p>{{ craft.description }}</p>
                 </div>
-                <div class="image-item">
-                    <img src="{% static 'images/handcraft2.jpg' %}" alt="Handcraft 2">
-                </div>
-                <div class="image-item">
-                    <img src="{% static 'images/handcraft3.jpg' %}" alt="Handcraft 3">
-                </div>
+                {% empty %}
+                <p>No handcrafts available.</p>
+                {% endfor %}
             </div>
         </div>
     </main>
