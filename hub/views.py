@@ -25,47 +25,11 @@ def Gallery (request):
 def Artist_profile (request):
     return render (request, 'artist_profile.html')
 
-def Joshua_smith (request):
-    return render (request, 'josh.html')
-
-def Camilia_colin (request):
-    return render (request, 'camilia.html')
-
 def Payment_process (request):
     return render (request, 'payment.html')
 
-def Jack_will (request):
-    return render (request, 'jack.html')
-
 def Purchased (request):
     return render (request, 'purchase.html')
-
-def Camilia_art1 (request):
-    return render (request, 'camiliaart1.html')
-
-def Camilia_art2 (request):
-    return render (request, 'camiliaart2.html')
-
-def Camilia_art3 (request):
-    return render (request, 'camiliaart3.html')
-
-def Jacks_art1 (request):
-    return render (request, 'jackart1.html')
-
-def Jacks_art2 (request):
-    return render (request, 'jackart2.html')
-
-def Jacks_art3 (request):
-    return render (request, 'jackart3.html')
-
-def Joshuas_art1 (request):
-    return render (request, 'joshuaart1.html')
-
-def Joshuas_art2 (request):
-    return render (request, 'joshuaart2.html')
-
-def Joshuas_art3 (request):
-    return render (request, 'joshuaart3.html')
 
 def Paintings (request):
     return render (request, 'paintings.html')
@@ -101,4 +65,10 @@ def artist(request):
        'artists': artists,
     }
     return render (request,'artist_profile.html',context=context)
-    
+def gallery_view(request):
+    categories = Category.objects.all()
+    print(categories)  # Debug: Check if categories are being retrieved
+    context = {
+        'categories': categories,
+    }
+    return render(request, 'gallery.html', context)

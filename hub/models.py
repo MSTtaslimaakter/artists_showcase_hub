@@ -50,6 +50,7 @@ class Category(models.Model):
     category_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     description = models.TextField()
+    url_name = models.CharField(max_length=100, default='default_url')
 
     def __str__(self):
         return self.name

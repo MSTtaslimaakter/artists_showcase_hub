@@ -6,4 +6,3 @@ admin.site.register(ArtPiece)
 admin.site.register(Category)
 admin.site.register(ArtPieceCategory)
 admin.site.register(UserProfile)
-# Register your models here.
