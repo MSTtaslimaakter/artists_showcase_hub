@@ -72,3 +72,9 @@ def gallery_view(request):
         'categories': categories,
     }
     return render(request, 'gallery.html', context)
+def event_page(request):
+    events = Event_s.objects.all()  # Fetch all events from the correct model
+    context = {
+        'events': events
+    }
+    return render(request, 'event.html', context)
