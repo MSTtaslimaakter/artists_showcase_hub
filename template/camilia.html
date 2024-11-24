@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camilia Collins - Artist's Showcase Hub</title>
+    <title>Artist's Profile - Artist's Showcase Hub</title>
     {% load static %}
-
-    <link rel="stylesheet" href="{% static 'camilia.css' %}"> <!-- Linking the jack.css file for consistent styling -->
+    <link rel="stylesheet" href="{% static 'artist_profile.css' %}">
 </head>
 <body>
-
     <!-- Header Section -->
     <header class="site-header">
         <div class="container">
-            <h1 class="site-title">Camilia Collin's Profile</h1>
+            <h1 class="site-title">Artist's Profile</h1>
             <nav class="main-nav">
                 <ul>
                     <li><a href="{% url 'Home' %}">Home</a></li>
-                    <li><a href="{% url 'Sign_in' %}">Sign In</a></li>
+                    <li><a href="{% url 'About' %}">About</a></li>
+                    <li><a href="{% url 'Event' %}">Events</a></li>
                     <li><a href="{% url 'Gallery' %}">Gallery</a></li>
                     <li><a href="{% url 'Artist_profile' %}">Artists</a></li>
-                
                 </ul>
             </nav>
         </div>
@@ -29,38 +27,16 @@
     <!-- Main Content Section -->
     <main class="content">
         <section class="artist-intro">
-            <h2>About Camilia Collin</h2>
-            <p>
-                Camilia Collins is a celebrated sculptor known for transforming raw materials into captivating, thought-provoking works of art. 
-                With a unique ability to blend traditional techniques and modern innovation, Camilia creates sculptures that explore themes of 
-                human form and abstract concepts. Their pieces often evoke deep emotions, offering a tangible connection between the viewer and 
-                the subject. Over the years, she has received prestigious accolades, including the “Scratch Award” for “Best Contemporary Sculpture” 
-                and the “Apocalypse Award for Excellence in Artistic Innovation.” Their work has been exhibited in galleries and museums around the 
-                world, earning critical acclaim for its boldness and creative expression.
-            </p>
-            <p>
-                Driven by a passion for pushing boundaries, Camilia continues to inspire and engage with audiences through their powerful, enduring sculptures.
-            </p>
         </section>
 
-        <section class="artist-gallery"><br><br>
-            <h2>Featured Sculptures</h2>
+        <section class="artist-gallery">
             <div class="gallery">
+                {% for artist in artists %}
                 <div class="gallery-item">
-                    <img src="sculp (3).jpeg"  width="150" height="200">
-                    <h3><a href="{% url 'Camilia_art1' %}">Krishna</a></h3>
-                    <p>$1206.00</p>
+                    <img src="{{ artist.image_url }}" width="150" height="200" alt="Picture of {{ artist.name }}">
+                    <h3><a href="{% url artist.profile_url %}">{{ artist.name }}</a></h3>
                 </div>
-                <div class="gallery-item">
-                    <img src="sculp (1).jpeg" width="150" height="200">
-                    <h3><a href="{% url 'Camilia_art2' %}">Affection</a></h3>
-                    <p>$1068.00</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="sculp.jpeg"  width="150" height="200">
-                    <h3><a href="{% url 'Camilia_art3' %}">Guardian Angel</a></h3>
-                    <p>$806.00</p>
-                </div>
+                {% endfor %}
             </div>
         </section>
     </main>
@@ -71,12 +47,11 @@
             <p>&copy; 2024 Artist's Showcase Hub. All rights reserved.</p>
             <p>Follow us on social media!</p>
             <div class="social-links">
-                <a href="#">Facebook</a> | 
-                <a href="#">Twitter</a> | 
-                <a href="#">Instagram</a>
+                <a href="https://www.facebook.com/">Facebook</a> |
+                <a href="https://twitter.com/?lang=en">Twitter</a> |
+                <a href="https://www.instagram.com/">Instagram</a>
             </div>
         </div>
     </footer>
-
 </body>
 </html>

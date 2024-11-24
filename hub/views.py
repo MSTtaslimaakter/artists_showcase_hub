@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import render
-from .models import Market_place
+from .models import *
 def Home (request):
     return render (request,'home.html')
 
@@ -95,4 +95,10 @@ def about(request):
     }
 
     return render (request,'about.html',context=context)
+def artist(request):
+    artists=Artist.objects.all()
+    context={
+       'artists': artists,
+    }
+    return render (request,'artist_profile.html',context=context)
     

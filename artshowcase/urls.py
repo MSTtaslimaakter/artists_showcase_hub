@@ -17,8 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from hub import views 
+from .import settings
 from django.conf.urls.static import static
-from django.conf import settings
+
 
 
 
@@ -33,9 +34,9 @@ urlpatterns = [
     path('sign_in/',views.Sign_in,name='Sign_in'),
     path('log_in/',views.Log_in,name='Log_in'),
     path('gallery/',views.Gallery,name='Gallery'),
-    path('artist_profile/',views.Artist_profile,name='Artist_profile'),
+    path('artist_profile/',views.artist,name='artist_profile'),
     path('joshua_smith/',views.Joshua_smith,name='Joshua_smith'),
-    path('camilia_colins/',views.Camilia_colin,name='Camilia_colin'),
+    path('camilia_colins/',views.Camilia_colin,name='camilia'),
     path('jack_will/',views.Jack_will,name='Jack_will'),
     path('payment_process/',views.Payment_process,name='Payment_process'),
     path('purchase/',views.Purchased,name='Purchased'),
