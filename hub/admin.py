@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Market_place,Artist, ArtPiece,Category, ArtPieceCategory, UserProfile
-admin.site.register(Market_place)
+from .models import Event_s,Artist, ArtPiece,Category, ArtPieceCategory, UserProfile
+admin.site.register(Event_s)
 admin.site.register(Artist)
 admin.site.register(ArtPiece)
 admin.site.register(Category)
