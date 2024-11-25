@@ -83,3 +83,6 @@ def event_page(request):
         'events': events
     }
     return render(request, 'event.html', context)
+def artist_profile_details(request, artist_id):
+    artist = get_object_or_404(Artist, pk=artist_id)
+    return render(request, 'artist_profile_details.html', {'artist': artist}) 
