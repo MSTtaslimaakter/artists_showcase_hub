@@ -27,18 +27,19 @@
     <main class="content">
         <div class="container">
             <h2>Photography</h2>
-            <p>Explore beautiful Photography pieces captured by talented photographers.</p>
+            <p>Explore beautiful photography pieces captured by talented photographers.</p>
 
             <div class="image-gallery">
+                <!-- Loop through the photos objects and display each one -->
+                {% for photo in photos %}
                 <div class="image-item">
-                    <img src="{% static 'images/photography1.jpg' %}" alt="Photography 1">
+                    <img src="{{ photo.image.url }}" alt="{{ photo.title }}">
+                    <p>{{ photo.title }}</p>
+                    <p>{{ photo.description }}</p>
                 </div>
-                <div class="image-item">
-                    <img src="{% static 'images/photography2.jpg' %}" alt="Photography 2">
-                </div>
-                <div class="image-item">
-                    <img src="{% static 'images/photography3.jpg' %}" alt="Photography 3">
-                </div>
+                {% empty %}
+                <p>No photography available.</p>
+                {% endfor %}
             </div>
         </div>
     </main>

@@ -42,6 +42,5 @@ urlpatterns = [
     path('handcrafts/', views.Handcraft, name='handcrafts'),
     path('photography/', views.Photography, name='photography'),
     path('abstractart/', views.Abstractart, name='abstractart'),
-     path('artist_profile/<int:artist_id>/', views.artist_profile_details, name='artist_profile_details'),
-
+    
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

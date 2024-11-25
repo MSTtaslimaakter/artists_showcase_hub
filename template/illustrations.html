@@ -30,15 +30,16 @@
             <p>Explore unique and creative illustrations from various artists.</p>
 
             <div class="image-gallery">
+                <!-- Loop through the illustrations and display them -->
+                {% for illustration in illustrations %}
                 <div class="image-item">
-                    <img src="{% static 'images/illustration1.jpg' %}" alt="Illustration 1">
+                    <img src="{{ illustration.image.url }}" alt="{{ illustration.title }}">
+                    <p>{{ illustration.title }}</p>
+                    <p>{{ illustration.description }}</p>
                 </div>
-                <div class="image-item">
-                    <img src="{% static 'images/illustration2.jpg' %}" alt="Illustration 2">
-                </div>
-                <div class="image-item">
-                    <img src="{% static 'images/illustration3.jpg' %}" alt="Illustration 3">
-                </div>
+                {% empty %}
+                <p>No illustrations available.</p>
+                {% endfor %}
             </div>
         </div>
     </main>

@@ -47,14 +47,14 @@ def Abstractart (request):
 # Create your views here.
 
 def home(request):
-    art= Market_place.objects.all()
+    art= Event_s.objects.all()
     context= {
         'art': art,
     }
 
     return render (request,'home.html',context=context)
 def about(request):
-    art= Market_place.objects.all()
+    art= Event_s.objects.all()
     context= {
         'art': art,
     }
@@ -66,6 +66,8 @@ def artist(request):
        'artists': artists,
     }
     return render (request,'artist_profile.html',context=context)
+
+
 def gallery_view(request):
     categories = Category.objects.all()
     print(categories)  # Debug: Check if categories are being retrieved
@@ -73,17 +75,11 @@ def gallery_view(request):
         'categories': categories,
     }
     return render(request, 'gallery.html', context)
+
+
 def event_page(request):
     events = Event_s.objects.all()  # Fetch all events from the correct model
     context = {
         'events': events
     }
     return render(request, 'event.html', context)
-def artist_profile_details(request, artist_id):
-    artist = get_object_or_404(Artist, pk=artist_id)
-    return render(request, 'artist_profile_details.html', {'artist': artist})
-def artist_profile(request):
-    artists = Artist.objects.all()  # Make sure this is fetching valid artist objects
-    context = {'artists': artists}
-  
-    return render(request, 'artist_profile.html', context)

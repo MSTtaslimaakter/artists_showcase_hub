@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artist's Showcase Hub - Paintings</title>
+    <title>Artist's Showcase Hub - Abstract Art</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'gallery.css' %}">
 </head>
@@ -27,18 +27,19 @@
     <main class="content">
         <div class="container">
             <h2>Abstract Art</h2>
-            <p>Explore the beautiful collection of abstractarts created by talented artists.</p>
+            <p>Explore the beautiful collection of abstract art created by talented artists.</p>
 
             <div class="image-gallery">
+                <!-- Loop through the abstract art objects and display each one -->
+                {% for art in abstract_arts %}
                 <div class="image-item">
-                    <img src="{% static 'images/abstractart1.jpg' %}" alt="Abstractart 1">
+                    <img src="{{ art.image.url }}" alt="{{ art.title }}">
+                    <p>{{ art.title }}</p>
+                    <p>{{ art.description }}</p>
                 </div>
-                <div class="image-item">
-                    <img src="{% static 'images/abstractart2.jpg' %}" alt="Abstractart 2">
-                </div>
-                <div class="image-item">
-                    <img src="{% static 'images/abstractart3.jpg' %}" alt="Abstractart 3">
-                </div>
+                {% empty %}
+                <p>No abstract art available.</p>
+                {% endfor %}
             </div>
         </div>
     </main>
