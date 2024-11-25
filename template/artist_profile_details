@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<a href="{% url 'artist_profile_details' artist.id %}">
+    View Profile
+</a>
+for artist in artists:
+    print(f"ID: {artist.id}, Name: {artist.name}")
+
+<div class="form-container">
+    <form method="POST" enctype="multipart/form-data" class="form-class">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Submit Your Information</legend>
+            {{ form.as_p }}
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

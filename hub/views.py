@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import *
 def Home (request):
     return render (request,'home.html')
@@ -78,3 +79,11 @@ def event_page(request):
         'events': events
     }
     return render(request, 'event.html', context)
+def artist_profile_details(request, artist_id):
+    artist = get_object_or_404(Artist, pk=artist_id)
+    return render(request, 'artist_profile_details.html', {'artist': artist})
+def artist_profile(request):
+    artists = Artist.objects.all()  # Make sure this is fetching valid artist objects
+    context = {'artists': artists}
+  
+    return render(request, 'artist_profile.html', context)

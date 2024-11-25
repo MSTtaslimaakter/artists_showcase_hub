@@ -34,13 +34,17 @@
                 {% for artist in artists %}
                 <div class="gallery-item">
                     <tr>
-                        <td>{{artist.name}}</td>
+                        <a href="{% url 'artist_profile_details' artist.artist_id %}">
+                        {{artist.name}}
+                    </a>
                         <br>
                         
                                                
                     </tr>
                     <img src="{{ artist.profile_picture.url}}" width="150" height="200" alt="Picture of {{ artist.name }}">
-                    
+                    <div class="card-footer p-4 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'artist_profile_details' artist.artist_id %}"><Details></a></div>
+                    </div>
                 </div>
                 {% endfor %}
             </div>
