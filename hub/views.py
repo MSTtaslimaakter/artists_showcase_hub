@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import ArtistForm
 from django.shortcuts import render, get_object_or_404
+from .forms import *
 from .models import *
 def Home (request):
     return render (request,'home.html')
@@ -86,3 +88,64 @@ def event_page(request):
 def artist_profile_details(request, artist_id):
     artist = get_object_or_404(Artist, pk=artist_id)
     return render(request, 'artist_profile_details.html', {'artist': artist}) 
+def upload_artist(request):
+   form = ArtistForm()
+   if request.method == 'POST':
+       form = ArtistForm(request.POST, request.FILES)
+       if form.is_valid():
+           form.save()
+           return redirect('home')
+   context = {'form':form}
+   return render(request, template_name = 'artist_form.html', context= context)
+def update_artist(request,id):
+   artist = Artist.objects.get(pk = id)
+   form = ArtistForm(instance = artist)
+   if request.method == 'POST':
+       form = ArtistForm(request.POST, request.FILES,instance =artist)
+       if form.is_valid():
+           form.save()
+           return redirect('home')
+   context = {'form':form}
+   return render(request, template_name = 'artist_form.html', context= context)
+def delete_artist(request,id):
+   artist = Artist.objects.get(pk=id)
+   if request.method == 'POST':
+       artist.delete()
+       return redirect('home')
+   return render(request, template_name = 'store\delete_artist.html')
+
+def paintings_view(request):
+    paintings = Painting.objects.all()  # Fetch all events from the correct model
+    context = {
+        'paintings': paintings
+    }
+    return render(request, 'paintings.html', context)
+
+def illustrations_view(request):
+    illustrations = Illustration.objects.all()  # Fetch all events from the correct model
+    context = {
+        'illustrations': illustrations
+    }
+    return render(request, 'event.html', context)
+
+def handcraft_view(request):
+    handcrafts = HandCraft.objects.all()  # Fetch all events from the correct model
+    context = {
+        'handcrafts': handcrafts
+    }
+    return render(request, 'event.html', context)
+
+def abstractart_view(request):
+    abstractarts = HandCraft.objects.all()  # Fetch all events from the correct model
+    context = {
+        'abstractarts': abstractarts
+    }
+    return render(request, 'abstractart.html', context)
+
+def photography_view(request):
+    photos = HandCraft.objects.all()  # Fetch all events from the correct model
+    context = {
+        'photos': photos
+    }
+    return render(request, 'photography.html', context)
+   

@@ -16,7 +16,7 @@ class Event_s(models.Model):
 
 
 class Artist(models.Model):
-    artist_id = models.AutoField(primary_key=True)
+    id = models.BigAutoField(primary_key=True, null=False,blank=True)
     name = models.CharField(max_length=100)
     bio = models.TextField()
     profile_picture = models.ImageField(upload_to='artist_pics/')
@@ -32,7 +32,7 @@ class Artist(models.Model):
 
 
 class ArtPiece(models.Model):
-    art_piece_id = models.AutoField(primary_key=True)
+   
     title = models.CharField(max_length=255)
     description = models.TextField()
     artist = models.ForeignKey(Artist, related_name='art_pieces', on_delete=models.CASCADE)
@@ -56,16 +56,6 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-
-class ArtPieceCategory(models.Model):
-    art_piece = models.ForeignKey(ArtPiece, on_delete=models.CASCADE)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-
-    class Meta:
-        unique_together = ['art_piece', 'category']
-
-    def __str__(self):
-        return f"{self.art_piece.title} - {self.category.name}"
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
@@ -95,7 +85,7 @@ class Illustration(models.Model):
       
 class AbstractArt(models.Model):
     title = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='abstractart/')  # Path where images will be stored
+    image = models.ImageField(upload_to='abstractarts/')  # Path where images will be stored
     description = models.TextField()
 
     def __str__(self):
@@ -103,7 +93,7 @@ class AbstractArt(models.Model):
     
 class HandCraft(models.Model):
     title = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='handcraft/')  # Image storage path
+    image = models.ImageField(upload_to='handcrafts/')  # Image storage path
     description = models.TextField()
 
     def __str__(self):
@@ -111,8 +101,10 @@ class HandCraft(models.Model):
     
 class Photography(models.Model):
     title = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='photography/')  # Image storage path
+    image = models.ImageField(upload_to='photographys/')  # Image storage path
     description = models.TextField()
 
     def __str__(self):
         return self.title    
+    
+    

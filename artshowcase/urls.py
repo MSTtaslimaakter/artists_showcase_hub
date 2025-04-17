@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from hub import views 
 from .import settings
+
 from django.conf.urls.static import static
 
 
@@ -43,5 +44,14 @@ urlpatterns = [
     path('photography/', views.Photography, name='photography'),
     path('abstractart/', views.Abstractart, name='abstractart'),
     path('artist_id/<str:id>',views.artist_profile_details, name = 'artist_profile_details'),
+    path('upload_artist/',views.upload_artist,name='upload_artist'),
+    path('update_artist/<str:id>',views.update_artist,name = 'update_artist'),
+    path('delete_artist/<str:id>',views.delete_artist,name = 'delete_artist'),
+    path('painting/', views.paintings_view, name= 'paintings'),
+    path('illustration/', views.illustrations_view, name= 'illustrations'),
+    path('handcrafts/', views.handcraft_view, name= 'handcraft'),
+    path('abstractarts/', views.abstractart_view, name= 'abstractart'),
+    path('photographys/', views.photography_view, name= 'photography'),
+
 
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
